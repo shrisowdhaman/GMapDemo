@@ -1,0 +1,23 @@
+
+<%= form_for([@event, @event.event_photos.build]) do |f| %>
+<div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div>
+      <%= f.label :desc  %>
+      <%= f.text_field :desc %>
+    </div>
+
+    <div>
+         <%= f.label 'Photo' %><br />
+         <%= f.file_field :photo %>
+    </div>
+
+     <div class="actions">
+       
+        <%= f.submit %>
+     </div>
+
+<%end%>

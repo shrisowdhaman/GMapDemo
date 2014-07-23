@@ -1,0 +1,23 @@
+<div id="header">
+	<% if current_user -%>
+	<div class="user_welcome">
+		<p>
+                  <%= link_to "Home",posts_path %>
+                  <%= link_to "settings", edit_user_path(current_user) %> |
+                  <%= link_to "sign_out", logout_path, :method => :delete %> |
+                  <%= link_to "User Attributes",new_user_attribute_path%>|
+                  <%= link_to "Events",events_path %>
+                
+		</p>
+	</div>
+	<% end -%>
+	
+</div>
+<div id="menu">
+  <p class="menu">
+    <% if current_user -%><%= image_tag current_user.user_attribute.photo.url(:thumb) if current_user.user_attribute%>
+     <%= link_to "My Account",myaccount_path%> hello , <%= current_user.login %>!
+    <%end%>     
+
+  </p>
+</div>

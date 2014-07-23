@@ -1,0 +1,19 @@
+
+  <tr>
+    <td>
+       <b>Commenter:</b>
+       <%= comment.commenter %>
+    </td>
+    <td>
+       <b>Comment:</b>
+       <%= comment.body %>
+    </td>
+    <td>
+      <%= link_to 'Destroy Comment', [comment.post, comment],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+
+    </td>
+  </tr>
+
+ 

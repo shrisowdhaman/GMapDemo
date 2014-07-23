@@ -1,0 +1,22 @@
+<h1><%= current_user.login  %>  's Events</h1>
+
+  <%= "No Events" if @events.blank?  %>
+  <br />
+
+    <% unless  @events.blank? %>
+     
+       <% @events.each do |event| %>
+        <p style="color:gray">
+           Title : <%= event.title %> <br/>
+           Content : <%= event.content %> <br />    
+
+            <%= link_to image_tag('delete.png' ,{:alt=>'delete',:height=>20}),event, confirm: 'Are you sure?', method: :delete%>
+            <%= link_to image_tag('user_add.png',:alt=>'Add user Photos'), event_event_photos_path(event) %>
+            
+           
+        </p>
+       <%end%>
+    <%  end %>
+<br />
+
+<%= link_to "Add Events", new_event_path %>

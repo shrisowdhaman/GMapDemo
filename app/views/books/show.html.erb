@@ -1,0 +1,27 @@
+<h2>Show books</h2>
+
+<table >
+  <tr>
+    <td>
+       Name :
+    </td>
+    <td>
+      <%= @book.name %>
+    </td>
+  </tr>
+
+  
+  <tr>
+    <td>
+      Title:
+    </td>
+    <td>
+      <%= @book.title %>
+    </td>
+  </tr>
+
+  
+</table>
+
+<%= link_to "create book", new_book_path %>|
+<%= link_to "Book Home Page", books_path %>

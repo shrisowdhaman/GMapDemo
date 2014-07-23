@@ -1,0 +1,32 @@
+<h1>EventPhoto#index</h1>
+
+Event Title : <b><%= @event.title%></b><br />
+Event Content : <b> <%= @event.content %> </b><br /> <br/>
+
+<% if  !@event.event_photos.blank? %>
+
+ <div id="gallery">
+    <% @event.event_photos.each do |event_photo| %>
+    
+      <%= link_to image_tag(event_photo.photo.url(:thumb)), event_photo.photo.url(:large) ,:title=>message(event_photo)%>
+
+    <% end  %>
+ </div>
+
+<% else %>
+
+  <h2> Please Upload images </h2><br />
+<% end %>
+  <br /><br/>
+  Upload the Image
+ <br/>
+ <% if flash[:notice] %>
+
+  <p class="notice" id="notice">
+           <%= notice %>
+  </p>
+
+<% end -%>
+ <%= render 'form' %>
+
+

@@ -1,0 +1,85 @@
+
+PostsController
+  GET index
+    assigns all posts as @posts
+  GET show
+    assigns the requested post as @post
+  GET new
+    assigns a new post as @post
+  GET edit
+    assigns the requested post as @post
+  POST create
+    with valid params
+      creates a new Post
+      assigns a newly created post as @post
+      redirects to the created post
+    with invalid params
+      assigns a newly created but unsaved post as @post
+      re-renders the 'new' template
+  PUT update
+    with valid params
+      updates the requested post
+      assigns the requested post as @post
+      redirects to the post
+    with invalid params
+      assigns the post as @post
+      re-renders the 'edit' template
+  DELETE destroy
+    destroys the requested post
+    redirects to the posts list
+
+CommentsHelper
+  add some examples to (or delete) /Users/kgislict/shrisowdhaman/Rails Collection /TestingDemo/spec/helpers/comments_helper_spec.rb (PENDING: No reason given)
+
+PostsHelper
+  add some examples to (or delete) /Users/kgislict/shrisowdhaman/Rails Collection /TestingDemo/spec/helpers/posts_helper_spec.rb (PENDING: No reason given)
+
+Comment
+  is valid with proper values
+  is not valid when body is null or less then 5 character
+  is not valid when commenter is null or less than 5 charavter
+
+Post
+  is valid with proper values
+  is not valid without proper name
+  is not valid without proper content
+  is not valid without proper title
+  is not valid if title character is less then 5
+  is not valid if content is less than 5
+
+Posts
+  GET /posts
+    works! (now write some real specs)
+
+PostsController
+  routing
+    routes to #index
+    routes to #new
+    routes to #show
+    routes to #edit
+    routes to #create
+    routes to #update
+    routes to #destroy
+
+posts/edit
+  renders the edit post form
+
+posts/index
+  renders a list of posts
+
+posts/new
+  renders new post form
+
+posts/show
+  renders attributes in <p>
+
+Pending:
+  CommentsHelper add some examples to (or delete) /Users/kgislict/shrisowdhaman/Rails Collection /TestingDemo/spec/helpers/comments_helper_spec.rb
+    # No reason given
+    # ./spec/helpers/comments_helper_spec.rb:14
+  PostsHelper add some examples to (or delete) /Users/kgislict/shrisowdhaman/Rails Collection /TestingDemo/spec/helpers/posts_helper_spec.rb
+    # No reason given
+    # ./spec/helpers/posts_helper_spec.rb:14
+
+Finished in 0.55897 seconds
+39 examples, 0 failures, 2 pending

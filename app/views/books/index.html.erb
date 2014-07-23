@@ -1,0 +1,25 @@
+<h2>List books</h2>
+<table >
+  <tr>
+    <td>
+       NAme :
+    </td>
+    <td>
+      Title:
+    </td>
+  </tr>
+
+  <%@books.each do |book|%>
+  <tr>
+    <td>
+      <%= book.name %>
+    </td>
+    <td>
+      <%= book.title %>
+    </td>
+  </tr>
+
+  <%end%>
+</table>
+
+<%= link_to "create book", new_book_path %>
